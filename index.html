@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+    <style>
+      /* Your CSS styles here */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Login Box -->
+      <div id="login-box">
+        <h2>Join Chat</h2>
+        <input type="text" id="username" placeholder="Enter username" />
+        <button onclick="registerUser()">Join</button>
+        <div id="error-message"></div>
+      </div>
+
+      <!-- Chat Box -->
+      <div id="chat-box">
+        <h2>Chat Messages</h2>
+        <div id="chat-messages"></div>
+        <div id="chat-inputs">
+          <input type="text" id="recipient" placeholder="Recipient username" />
+          <input
+            type="text"
+            id="message-input"
+            placeholder="Type your message..."
+          />
+          <button onclick="sendMessage()">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Socket.IO Library -->
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="/models/User.js"></script>
+    <script src="/models/Message.js"></script>
+  </body>
+</html>
